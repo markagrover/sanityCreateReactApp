@@ -13,12 +13,26 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "@sanity/google-maps-input"
+    "@sanity/google-maps-input",
+    "my-studio-logo"
   ],
   "parts": [
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "varOveride.css"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "components/Logo.js"
+    },
+    {
+      "implements": "part:@sanity/base/sanity-studio-logo",
+      "path": "components/Logo.js"
     }
   ]
 }
+
